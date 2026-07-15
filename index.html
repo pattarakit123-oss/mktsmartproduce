@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing Calendar — แพลนแคมเปญอย่างมืออาชีพ</title>
+    <meta name="description" content="ระบบจัดการปฏิทินการตลาด วางแผนแคมเปญ ติดตามสถานะ และวิเคราะห์ภาพรวมอย่างมีประสิทธิภาพ">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+Thai:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Ambient Background -->
+    <div class="ambient-bg">
+        <div class="ambient-orb orb-1"></div>
+        <div class="ambient-orb orb-2"></div>
+        <div class="ambient-orb orb-3"></div>
+    </div>
+
+    <div class="app-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="16" y1="2" x2="16" y2="6"/>
+                            <line x1="8" y1="2" x2="8" y2="6"/>
+                            <line x1="3" y1="10" x2="21" y2="10"/>
+                            <path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/>
+                        </svg>
+                    </div>
+                    <div class="logo-text">
+                        <h1>Marketing</h1>
+                        <span>Campaign Planner</span>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <button class="nav-item active" data-view="calendar" id="nav-calendar">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                        <line x1="16" y1="2" x2="16" y2="6"/>
+                        <line x1="8" y1="2" x2="8" y2="6"/>
+                        <line x1="3" y1="10" x2="21" y2="10"/>
+                    </svg>
+                    <span>ปฏิทิน</span>
+                </button>
+                <button class="nav-item" data-view="dashboard" id="nav-dashboard">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="7" height="9" rx="1"/>
+                        <rect x="14" y="3" width="7" height="5" rx="1"/>
+                        <rect x="14" y="12" width="7" height="9" rx="1"/>
+                        <rect x="3" y="16" width="7" height="5" rx="1"/>
+                    </svg>
+                    <span>แดชบอร์ด</span>
+                </button>
+                <button class="nav-item" data-view="campaigns" id="nav-campaigns">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                    </svg>
+                    <span>แคมเปญ</span>
+                </button>
+            </nav>
+
+            <div class="sidebar-section">
+                <h3 class="section-title">ช่องทาง</h3>
+                <div class="channel-filters" id="channelFilters">
+                    <label class="channel-filter">
+                        <input type="checkbox" value="social" checked>
+                        <span class="channel-dot" style="--dot-color: var(--channel-social)"></span>
+                        <span>Social Media</span>
+                    </label>
+                    <label class="channel-filter">
+                        <input type="checkbox" value="email" checked>
+                        <span class="channel-dot" style="--dot-color: var(--channel-email)"></span>
+                        <span>Email</span>
+                    </label>
+                    <label class="channel-filter">
+                        <input type="checkbox" value="ads" checked>
+                        <span class="channel-dot" style="--dot-color: var(--channel-ads)"></span>
+                        <span>Ads</span>
+                    </label>
+                    <label class="channel-filter">
+                        <input type="checkbox" value="content" checked>
+                        <span class="channel-dot" style="--dot-color: var(--channel-content)"></span>
+                        <span>Content</span>
+                    </label>
+                    <label class="channel-filter">
+                        <input type="checkbox" value="event" checked>
+                        <span class="channel-dot" style="--dot-color: var(--channel-event)"></span>
+                        <span>Event</span>
+                    </label>
+                    <label class="channel-filter">
+                        <input type="checkbox" value="seo" checked>
+                        <span class="channel-dot" style="--dot-color: var(--channel-seo)"></span>
+                        <span>SEO</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3 class="section-title">สถานะ</h3>
+                <div class="status-filters" id="statusFilters">
+                    <label class="channel-filter">
+                        <input type="checkbox" value="planned" checked>
+                        <span class="status-indicator planned"></span>
+                        <span>วางแผน</span>
+                    </label>
+                    <label class="channel-filter">
+                        <input type="checkbox" value="in-progress" checked>
+                        <span class="status-indicator in-progress"></span>
+                        <span>กำลังดำเนินการ</span>
+                    </label>
+                    <label class="channel-filter">
+                        <input type="checkbox" value="completed" checked>
+                        <span class="status-indicator completed"></span>
+                        <span>เสร็จสิ้น</span>
+                    </label>
+                    <label class="channel-filter">
+                        <input type="checkbox" value="cancelled" checked>
+                        <span class="status-indicator cancelled"></span>
+                        <span>ยกเลิก</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="sidebar-footer">
+                <button class="add-campaign-btn" id="addCampaignBtn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <line x1="12" y1="5" x2="12" y2="19"/>
+                        <line x1="5" y1="12" x2="19" y2="12"/>
+                    </svg>
+                    <span>เพิ่มแคมเปญ</span>
+                </button>
+                <button class="clear-all-btn" id="clearAllBtn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="3 6 5 6 21 6"/>
+                        <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+                    </svg>
+                    <span>ลบแคมเปญทั้งหมด</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Calendar View -->
+            <section class="view-section active" id="calendarView">
+                <div class="view-header">
+                    <div class="header-left">
+                        <h2 id="currentMonthYear">กรกฎาคม 2026</h2>
+                        <div class="view-toggle">
+                            <button class="toggle-btn active" data-cal-view="month" id="monthViewBtn">เดือน</button>
+                            <button class="toggle-btn" data-cal-view="week" id="weekViewBtn">สัปดาห์</button>
+                        </div>
+                    </div>
+                    <div class="header-right">
+                        <button class="today-btn" id="todayBtn">วันนี้</button>
+                        <div class="nav-arrows">
+                            <button class="arrow-btn" id="prevBtn">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <polyline points="15 18 9 12 15 6"/>
+                                </svg>
+                            </button>
+                            <button class="arrow-btn" id="nextBtn">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <polyline points="9 18 15 12 9 6"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calendar-container" id="calendarContainer">
+                    <div class="calendar-weekdays">
+                        <div class="weekday">อา</div>
+                        <div class="weekday">จ</div>
+                        <div class="weekday">อ</div>
+                        <div class="weekday">พ</div>
+                        <div class="weekday">พฤ</div>
+                        <div class="weekday">ศ</div>
+                        <div class="weekday">ส</div>
+                    </div>
+                    <div class="calendar-grid" id="calendarGrid">
+                        <!-- Generated by JS -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Dashboard View -->
+            <section class="view-section" id="dashboardView">
+                <div class="view-header">
+                    <h2>แดชบอร์ดภาพรวม</h2>
+                </div>
+                <div class="dashboard-content">
+                    <div class="stats-grid">
+                        <div class="stat-card" id="statTotal">
+                            <div class="stat-icon total">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                                </svg>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-number">0</span>
+                                <span class="stat-label">แคมเปญทั้งหมด</span>
+                            </div>
+                        </div>
+                        <div class="stat-card" id="statPlanned">
+                            <div class="stat-icon planned">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12 6 12 12 16 14"/>
+                                </svg>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-number">0</span>
+                                <span class="stat-label">วางแผน</span>
+                            </div>
+                        </div>
+                        <div class="stat-card" id="statInProgress">
+                            <div class="stat-icon in-progress">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+                                </svg>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-number">0</span>
+                                <span class="stat-label">กำลังดำเนินการ</span>
+                            </div>
+                        </div>
+                        <div class="stat-card" id="statCompleted">
+                            <div class="stat-icon completed">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                    <polyline points="22 4 12 14.01 9 11.01"/>
+                                </svg>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-number">0</span>
+                                <span class="stat-label">เสร็จสิ้น</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-grid">
+                        <div class="dashboard-card channel-breakdown">
+                            <h3>แคมเปญตามช่องทาง</h3>
+                            <div class="chart-container" id="channelChart">
+                                <!-- Generated by JS -->
+                            </div>
+                        </div>
+                        <div class="dashboard-card upcoming-campaigns">
+                            <h3>แคมเปญที่จะมาถึง</h3>
+                            <div class="upcoming-list" id="upcomingList">
+                                <!-- Generated by JS -->
+                            </div>
+                        </div>
+                        <div class="dashboard-card monthly-timeline">
+                            <h3>ไทม์ไลน์เดือนนี้</h3>
+                            <div class="timeline-container" id="monthlyTimeline">
+                                <!-- Generated by JS -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Campaigns List View -->
+            <section class="view-section" id="campaignsView">
+                <div class="view-header">
+                    <div class="header-left">
+                        <h2>รายการแคมเปญ</h2>
+                    </div>
+                    <div class="header-right">
+                        <div class="search-box">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"/>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                            </svg>
+                            <input type="text" placeholder="ค้นหาแคมเปญ..." id="searchInput">
+                        </div>
+                    </div>
+                </div>
+                <div class="campaigns-list" id="campaignsList">
+                    <!-- Generated by JS -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Campaign Modal -->
+    <div class="modal-overlay" id="campaignModal">
+        <div class="modal" id="modalContent">
+            <div class="modal-header">
+                <h3 id="modalTitle">เพิ่มแคมเปญใหม่</h3>
+                <button class="modal-close" id="modalClose">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <line x1="18" y1="6" x2="6" y2="18"/>
+                        <line x1="6" y1="6" x2="18" y2="18"/>
+                    </svg>
+                </button>
+            </div>
+            <form id="campaignForm">
+                <div class="form-group">
+                    <label for="campName">ชื่อแคมเปญ</label>
+                    <input type="text" id="campName" placeholder="เช่น Summer Sale 2026" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="campStartDate">วันเริ่มต้น</label>
+                        <input type="date" id="campStartDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="campEndDate">วันสิ้นสุด</label>
+                        <input type="date" id="campEndDate" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="campChannel">ช่องทาง</label>
+                        <select id="campChannel" required>
+                            <option value="">เลือกช่องทาง</option>
+                            <option value="social">Social Media</option>
+                            <option value="email">Email</option>
+                            <option value="ads">Ads</option>
+                            <option value="content">Content</option>
+                            <option value="event">Event</option>
+                            <option value="seo">SEO</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="campStatus">สถานะ</label>
+                        <select id="campStatus" required>
+                            <option value="planned">วางแผน</option>
+                            <option value="in-progress">กำลังดำเนินการ</option>
+                            <option value="completed">เสร็จสิ้น</option>
+                            <option value="cancelled">ยกเลิก</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="campBudget">งบประมาณ (บาท)</label>
+                    <input type="number" id="campBudget" placeholder="0" min="0">
+                </div>
+                <div class="form-group">
+                    <label for="campDescription">รายละเอียด</label>
+                    <textarea id="campDescription" rows="3" placeholder="อธิบายรายละเอียดของแคมเปญ..."></textarea>
+                </div>
+
+                <!-- Content Posting Section -->
+                <div class="form-divider">
+                    <span>ข้อมูลการลงคอนเทนต์</span>
+                </div>
+                <div class="form-group">
+                    <label>แพลตฟอร์มที่ลงคอนเทนต์</label>
+                    <div class="platform-checkboxes" id="platformCheckboxes">
+                        <label class="platform-check">
+                            <input type="checkbox" value="facebook">
+                            <span class="platform-icon">📘</span>
+                            <span>Facebook</span>
+                        </label>
+                        <label class="platform-check">
+                            <input type="checkbox" value="instagram">
+                            <span class="platform-icon">📸</span>
+                            <span>Instagram</span>
+                        </label>
+                        <label class="platform-check">
+                            <input type="checkbox" value="tiktok">
+                            <span class="platform-icon">🎵</span>
+                            <span>TikTok</span>
+                        </label>
+                        <label class="platform-check">
+                            <input type="checkbox" value="x-twitter">
+                            <span class="platform-icon">𝕏</span>
+                            <span>X / Twitter</span>
+                        </label>
+                        <label class="platform-check">
+                            <input type="checkbox" value="line">
+                            <span class="platform-icon">💬</span>
+                            <span>LINE OA</span>
+                        </label>
+                        <label class="platform-check">
+                            <input type="checkbox" value="youtube">
+                            <span class="platform-icon">▶️</span>
+                            <span>YouTube</span>
+                        </label>
+                        <label class="platform-check">
+                            <input type="checkbox" value="website">
+                            <span class="platform-icon">🌐</span>
+                            <span>Website</span>
+                        </label>
+                        <label class="platform-check">
+                            <input type="checkbox" value="threads">
+                            <span class="platform-icon">🔗</span>
+                            <span>Threads</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="campContentType">ประเภทคอนเทนต์</label>
+                        <select id="campContentType">
+                            <option value="">— เลือกประเภท —</option>
+                            <option value="image">🖼️ Image Post</option>
+                            <option value="video">🎬 Video</option>
+                            <option value="story-reel">📱 Story / Reel</option>
+                            <option value="carousel">🎠 Carousel</option>
+                            <option value="article">📝 Article / Blog</option>
+                            <option value="infographic">📊 Infographic</option>
+                            <option value="live">🔴 Live</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="campContentStatus">สถานะคอนเทนต์</label>
+                        <select id="campContentStatus">
+                            <option value="">— เลือกสถานะ —</option>
+                            <option value="draft">📄 แบบร่าง</option>
+                            <option value="ready">✅ พร้อมโพสต์</option>
+                            <option value="published">🚀 โพสต์แล้ว</option>
+                            <option value="scheduled">⏰ ตั้งเวลาไว้</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="campCaption">Caption / ข้อความโพสต์</label>
+                    <textarea id="campCaption" rows="3" placeholder="เขียน caption หรือข้อความที่จะโพสต์..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="campHashtags">Hashtags</label>
+                    <input type="text" id="campHashtags" placeholder="#marketing #branding #campaign">
+                </div>
+                <div class="form-group">
+                    <label>สีแคมเปญ</label>
+                    <div class="color-picker" id="colorPicker">
+                        <button type="button" class="color-option active" data-color="#6366f1" style="--swatch: #6366f1"></button>
+                        <button type="button" class="color-option" data-color="#8b5cf6" style="--swatch: #8b5cf6"></button>
+                        <button type="button" class="color-option" data-color="#ec4899" style="--swatch: #ec4899"></button>
+                        <button type="button" class="color-option" data-color="#f43f5e" style="--swatch: #f43f5e"></button>
+                        <button type="button" class="color-option" data-color="#f97316" style="--swatch: #f97316"></button>
+                        <button type="button" class="color-option" data-color="#eab308" style="--swatch: #eab308"></button>
+                        <button type="button" class="color-option" data-color="#22c55e" style="--swatch: #22c55e"></button>
+                        <button type="button" class="color-option" data-color="#06b6d4" style="--swatch: #06b6d4"></button>
+                    </div>
+                </div>
+                <input type="hidden" id="campId">
+                <div class="form-actions">
+                    <button type="button" class="btn-secondary" id="cancelBtn">ยกเลิก</button>
+                    <button type="button" class="btn-danger" id="deleteBtn" style="display:none">ลบ</button>
+                    <button type="submit" class="btn-primary" id="saveBtn">บันทึก</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Campaign Detail Popup -->
+    <div class="detail-popup" id="detailPopup">
+        <div class="detail-header">
+            <div class="detail-channel-badge" id="detailChannel"></div>
+            <button class="detail-close" id="detailClose">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="18" y1="6" x2="6" y2="18"/>
+                    <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+            </button>
+        </div>
+        <h3 id="detailName"></h3>
+        <div class="detail-meta">
+            <div class="detail-dates" id="detailDates"></div>
+            <div class="detail-status" id="detailStatus"></div>
+        </div>
+        <div class="detail-budget" id="detailBudget"></div>
+        <p class="detail-description" id="detailDescription"></p>
+        <div class="detail-content-info" id="detailContentInfo"></div>
+        <div class="detail-actions">
+            <button class="btn-edit" id="detailEditBtn">แก้ไข</button>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
