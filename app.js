@@ -54,6 +54,11 @@
         statuses: ['planned', 'in-progress', 'completed', 'cancelled']
     };
 
+    // Online Sync State
+    const SYNC_BUCKET = '6Y7y31uR82m9zTdx2cQ9x6';
+    let syncSpaceId = null;
+    let syncTimer = null;
+
     // =============================================
     // DOM References
     // =============================================
@@ -86,6 +91,51 @@
 
     function saveCampaigns() {
         localStorage.setItem(STORAGE_KEY, JSON.stringify(campaigns));
+        if (syncSpaceId) {
+            syncToCloud();
+        }
+    }
+
+    async function syncToCloud() {
+        if (!syncSpaceId) return;
+        try {
+            const res = await fetch(`https://kvdb.io/${SYNC_BUCKET}/cal_${syncSpaceId}`, {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(campaigns)
+            });
+            if (!res.ok) throw new Error('Cloud sync failed');
+        } catch (e) {
+            console.error('Error syncing to cloud:', e);
+            showToast('เชื่อมต่อคลาวด์ล้มเหลว', 'error');
+        }
+    }
+
+    async function syncFromCloud(silent = false) {
+        if (!syncSpaceId) return;
+        try {
+            const res = await fetch(`https://kvdb.io/${SYNC_BUCKET}/cal_${syncSpaceId}`);
+            if (res.status === 404) {
+                // If remote doesn't exist, write current state
+                await syncToCloud();
+                return;
+            }
+            if (!res.ok) throw new Error('Could not pull from cloud');
+            const data = await res.json();
+            if (Array.isArray(data)) {
+                const localStr = JSON.stringify(campaigns);
+                const remoteStr = JSON.stringify(data);
+                if (localStr !== remoteStr) {
+                    campaigns = data;
+                    localStorage.setItem(STORAGE_KEY, remoteStr);
+                    refreshCurrentView();
+                    if (!silent) showToast('ซิงค์ข้อมูลจากคลาวด์แล้ว ✓');
+                }
+            }
+        } catch (e) {
+            console.error('Error fetching from cloud:', e);
+            if (!silent) showToast('ไม่สามารถดึงข้อมูลจากออนไลน์ได้', 'error');
+        }
     }
 
     function getSampleCampaigns() {
@@ -893,6 +943,126 @@
     }
 
     // =============================================
+    // Sync Space Controls
+    // =============================================
+
+    function joinSpace(spaceId) {
+        if (!spaceId) return;
+        syncSpaceId = spaceId.trim().toLowerCase().replace(/[^a-z0-9_-]/g, '');
+        if (!syncSpaceId) return;
+
+        // Set interval for periodic check (every 10 seconds)
+        if (syncTimer) clearInterval(syncTimer);
+        syncTimer = setInterval(() => {
+            syncFromCloud(true);
+        }, 10000);
+
+        // Save status in localStorage so they don't loose their room connection on reload
+        localStorage.setItem('marketcal_sync_space_id', syncSpaceId);
+        
+        // Update URL hash
+        window.location.hash = syncSpaceId;
+
+        // Fetch initial remote campaigns
+        syncFromCloud(false);
+
+        // Update the Sync UI
+        renderSyncPanel();
+    }
+
+    function disconnectSpace() {
+        if (syncTimer) clearInterval(syncTimer);
+        syncSpaceId = null;
+        localStorage.removeItem('marketcal_sync_space_id');
+        
+        // Clear hash but keep the path clean
+        history.pushState("", document.title, window.location.pathname + window.location.search);
+        
+        // Load original local data
+        loadCampaigns();
+        refreshCurrentView();
+
+        renderSyncPanel();
+        showToast('ยกเลิกเชื่อมต่อห้องแล้ว', 'info');
+    }
+
+    function renderSyncPanel() {
+        const panel = $('#syncPanel');
+        if (!panel) return;
+
+        if (syncSpaceId) {
+            panel.innerHTML = `
+                <div class="sync-status online">
+                    <span class="status-indicator in-progress"></span>
+                    <span>เชื่อมต่อออนไลน์แล้ว</span>
+                </div>
+                <div class="sync-info text-secondary">
+                    โค้ดแชร์: <strong style="color:var(--accent-hover); font-size: 0.85rem;">${syncSpaceId}</strong>
+                </div>
+                <div class="sync-btn-group">
+                    <button class="sync-action-btn primary" id="copyShareBtn">
+                        📋 คัดลอกลิงก์แชร์
+                    </button>
+                    <button class="sync-action-btn" id="syncNowBtn">
+                        🔄 ซิงค์ด่วน
+                    </button>
+                    <button class="sync-action-btn secondary-danger" id="disconnectBtn">
+                        🔌 ตัดการเชื่อมต่อ
+                    </button>
+                </div>
+            `;
+
+            $('#copyShareBtn').onclick = () => {
+                const shareUrl = `${window.location.origin}${window.location.pathname}#${syncSpaceId}`;
+                navigator.clipboard.writeText(shareUrl).then(() => {
+                    showToast('คัดลอกลิงก์แชร์แล้ว! ส่งต่อให้ทีมได้เลย ✓');
+                }).catch(() => {
+                    showToast('คัดลอกรหัสห้อง: ' + syncSpaceId, 'info');
+                });
+            };
+
+            $('#syncNowBtn').onclick = () => {
+                syncFromCloud(false);
+            };
+
+            $('#disconnectBtn').onclick = () => {
+                disconnectSpace();
+            };
+        } else {
+            panel.innerHTML = `
+                <div class="sync-status offline">
+                    <span class="status-indicator cancelled"></span>
+                    <span>โหมดออฟไลน์ (ในเครื่อง)</span>
+                </div>
+                <div class="sync-info">
+                    สร้างห้องแชร์หรือเข้าร่วมห้องกับคนอื่นเพื่อซิงค์ข้อมูลร่วมกันออนไลน์
+                </div>
+                <div class="sync-btn-group">
+                    <button class="sync-action-btn primary" id="createSpaceBtn">
+                        ✨ สร้างห้องแชร์ใหม่
+                    </button>
+                    <button class="sync-action-btn" id="joinSpaceBtn">
+                        🔑 เข้าร่วมห้องด้วยโค้ด
+                    </button>
+                </div>
+            `;
+
+            $('#createSpaceBtn').onclick = () => {
+                const randomId = 'mkt-' + Math.random().toString(36).substr(2, 6);
+                joinSpace(randomId);
+                showToast('สร้างห้องแชร์เรียบร้อย! คัดลอกลิงก์แชร์ส่งให้ทีมงานได้เลย');
+            };
+
+            $('#joinSpaceBtn').onclick = () => {
+                const code = prompt('กรุณากรอกรหัสห้องแชร์ (เช่น mkt-abc123):');
+                if (code) {
+                    joinSpace(code);
+                }
+            };
+        }
+    }
+
+    // =============================================
     // Event Listeners
     // =============================================
 
@@ -1027,8 +1197,19 @@
     // =============================================
 
     function init() {
-        loadCampaigns();
-        renderCalendar();
+        const hash = window.location.hash ? window.location.hash.substring(1) : null;
+        const savedSpace = localStorage.getItem('marketcal_sync_space_id');
+
+        if (hash) {
+            joinSpace(hash);
+        } else if (savedSpace) {
+            joinSpace(savedSpace);
+        } else {
+            loadCampaigns();
+            renderCalendar();
+            renderSyncPanel();
+        }
+        
         initEventListeners();
     }
 
