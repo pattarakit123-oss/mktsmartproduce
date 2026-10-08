@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pattarakrit.netlify.app/sitemap.xml
+Sitemap: https://pattarakri.netlify.app/sitemap.xml
