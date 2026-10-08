@@ -68,7 +68,7 @@
     $('contact-lead').textContent = c.contact.lead;
     $('contact-body').innerHTML = c.contact.links.map(function (l) { return '<a class="btn" href="' + esc(l.href) + '" target="_blank" rel="noopener">' + esc(l.t) + '</a>'; }).join('');
     $('footer').textContent = c.footer;
-    document.title = c.brand + ' — Portfolio';
+    document.title = c.brand + ' — Digital Marketing Portfolio';
   }
 
   var lang = initial();
