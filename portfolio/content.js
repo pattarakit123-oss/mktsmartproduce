@@ -5,7 +5,7 @@
 window.CONTENT = {
   th: {
     brand: "ภัทรกริช สิทธิวงค์ษา",
-    nav: { about: "เกี่ยวกับฉัน", skills: "ทักษะ", projects: "ผลงาน", journey: "เส้นทาง", contact: "ติดต่อ" },
+    nav: { about: "เกี่ยวกับฉัน", skills: "ทักษะ", projects: "ผลงาน", gallery: "ภาพกิจกรรม", journey: "เส้นทาง", contact: "ติดต่อ" },
     hero: {
       eyebrow: "Digital Marketing · มหาวิทยาลัยศรีปทุม",
       title: "เปลี่ยนความเข้าใจพฤติกรรมมนุษย์<br>ให้เป็นกลยุทธ์การตลาด",
@@ -67,8 +67,8 @@ window.CONTENT = {
         {
           title: "ผู้ช่วยสอน (TA) โครงการ VAIP รุ่น 10–13",
           role: "TA ร่วมกับพี่อ้น (AEIOU) และพี่มิ้น (Realize) · คณะบริหารธุรกิจ ม.ศรีปทุม",
-          desc: "[อธิบายหน้าที่จริง เช่น ช่วยสอนอะไร ดูแลผู้เรียนอย่างไร ประสานงานหรือเตรียมสื่ออะไรบ้าง]",
-          result: "สิ่งที่ได้: [เช่น จำนวนผู้เรียนที่ดูแล ทักษะการสื่อสารและการใช้ AI ในงาน]",
+          desc: "ในทีม TA Support ของ SPU AI Business Talent Club ดูแลด้านการตลาดดิจิทัล: ช่วยผู้เรียนค้นหาไอเดียและแนวทางใหม่ๆ ให้คำปรึกษาเรื่องงานและการตลาดดิจิทัล และอยู่เคียงข้างทุกการเรียนรู้",
+          result: "สิ่งที่ได้: [เช่น จำนวนผู้เรียนที่ดูแล ผลลัพธ์ที่เกิดขึ้น]",
           tags: ["TA", "AI", "การสื่อสาร"]
         },
         {
@@ -79,6 +79,16 @@ window.CONTENT = {
           tags: ["Planning", "Dashboard", "JavaScript"],
           link: "../index.html", linkText: "เปิดใช้งานแอป →"
         }
+      ]
+    },
+    gallery: {
+      h: "ภาพกิจกรรม",
+      items: [
+        { src: "images/vaip-ta-team.jpg", alt: "ภาพหมู่ทีมผู้ช่วยสอนและทีมงาน VAIP ใส่แจ็กเก็ตสีฟ้า", cap: "ทีมผู้ช่วยสอนและทีมงานโครงการ VAIP · คณะบริหารธุรกิจ ม.ศรีปทุม" },
+        { src: "images/ta-support-poster.jpg", alt: "โปสเตอร์แนะนำทีม TA Support ของ SPU AI Business Talent Club", cap: "โปสเตอร์แนะนำทีม TA Support · SPU AI Business Talent Club" },
+        { src: "images/vaip10-backstage.jpg", alt: "ทีมงานนั่งเตรียมของที่ระลึกก่อนงาน VAIP รุ่น 10", cap: "เตรียมของที่ระลึกก่อนเริ่มงาน VAIP รุ่น 10" },
+        { src: "images/ctc-2026.jpg", alt: "ภาพหมู่หน้าเวที Creative Talk Conference 2026", cap: "Supalai Creative Talk Conference (CTC 2026) · 19–20 มิ.ย. 2026 · Paragon Hall" },
+        { src: "images/seminar-speakers.jpg", alt: "ภาพหมู่ผู้เรียนและวิทยากรหลังจบสัมมนา", cap: "ภาพหมู่หลังจบสัมมนาร่วมกับวิทยากรและผู้เรียน" }
       ]
     },
     journey: {
@@ -105,7 +115,7 @@ window.CONTENT = {
 
   en: {
     brand: "Pattarakrit Sitthiwongsa",
-    nav: { about: "About", skills: "Skills", projects: "Work", journey: "Journey", contact: "Contact" },
+    nav: { about: "About", skills: "Skills", projects: "Work", gallery: "Moments", journey: "Journey", contact: "Contact" },
     hero: {
       eyebrow: "Digital Marketing · Sripatum University",
       title: "Turning insight into human behavior<br>into marketing strategy",
@@ -167,8 +177,8 @@ window.CONTENT = {
         {
           title: "Teaching assistant, VAIP batches 10–13",
           role: "TA with P' Aon (AEIOU) and P' Min (Realize) · School of Business Administration, SPU",
-          desc: "[Describe your actual duties: what you helped teach, how you supported learners, what you coordinated or prepared.]",
-          result: "Outcome: [e.g. learners supported, communication skills, using AI at work]",
+          desc: "On the TA Support team of the SPU AI Business Talent Club, covering digital marketing: helping learners find ideas and new directions, advising on their work and on digital marketing, and standing by them through every step of learning.",
+          result: "Outcome: [e.g. learners supported, results achieved]",
           tags: ["TA", "AI", "Communication"]
         },
         {
@@ -179,6 +189,16 @@ window.CONTENT = {
           tags: ["Planning", "Dashboard", "JavaScript"],
           link: "../index.html", linkText: "Open the app →"
         }
+      ]
+    },
+    gallery: {
+      h: "Moments",
+      items: [
+        { src: "images/vaip-ta-team.jpg", alt: "Group photo of the VAIP teaching assistants and staff in blue jackets", cap: "VAIP teaching assistants and team · School of Business Administration, SPU" },
+        { src: "images/ta-support-poster.jpg", alt: "TA Support team introduction poster from SPU AI Business Talent Club", cap: "TA Support team poster · SPU AI Business Talent Club" },
+        { src: "images/vaip10-backstage.jpg", alt: "Team members preparing small gifts before the VAIP batch 10 event", cap: "Preparing keepsakes before the VAIP batch 10 event" },
+        { src: "images/ctc-2026.jpg", alt: "Group photo in front of the Creative Talk Conference 2026 stage", cap: "Supalai Creative Talk Conference (CTC 2026) · 19–20 Jun 2026 · Paragon Hall" },
+        { src: "images/seminar-speakers.jpg", alt: "Group photo of learners and speakers after a seminar", cap: "Group photo with speakers and learners after a seminar" }
       ]
     },
     journey: {

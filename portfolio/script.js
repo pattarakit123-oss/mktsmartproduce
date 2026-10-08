@@ -14,7 +14,7 @@
     document.documentElement.lang = lang;
     $('lang').textContent = lang === 'th' ? 'EN' : 'TH';
     $('brand').textContent = c.brand;
-    $('links').innerHTML = ['about', 'skills', 'projects', 'journey', 'contact']
+    $('links').innerHTML = ['about', 'skills', 'projects', 'gallery', 'journey', 'contact']
       .map(function (k) { return '<a href="#' + k + '">' + esc(c.nav[k]) + '</a>'; }).join('');
 
     $('hero-eyebrow').textContent = c.hero.eyebrow;
@@ -38,6 +38,11 @@
         '<p>' + esc(p.desc) + '</p><p class="result">' + esc(p.result) + '</p>' +
         '<div class="tags">' + p.tags.map(function (t) { return '<span class="tag">' + esc(t) + '</span>'; }).join('') + '</div>' +
         (p.link ? '<a class="more" href="' + esc(p.link) + '">' + esc(p.linkText) + '</a>' : '') + '</article>';
+    }).join('');
+
+    $('gallery-h').textContent = c.gallery.h;
+    $('gallery-body').innerHTML = c.gallery.items.map(function (g) {
+      return '<figure><img src="' + esc(g.src) + '" alt="' + esc(g.alt) + '" loading="lazy"><figcaption>' + esc(g.cap) + '</figcaption></figure>';
     }).join('');
 
     $('journey-h').textContent = c.journey.h;
