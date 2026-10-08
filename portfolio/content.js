@@ -86,9 +86,14 @@ window.CONTENT = {
       items: [
         { src: "images/vaip-ta-team.jpg", alt: "ภาพหมู่ทีมผู้ช่วยสอนและทีมงาน VAIP ใส่แจ็กเก็ตสีฟ้า", cap: "ทีมผู้ช่วยสอนและทีมงานโครงการ VAIP · คณะบริหารธุรกิจ ม.ศรีปทุม" },
         { src: "images/ta-support-poster.jpg", alt: "โปสเตอร์แนะนำทีม TA Support ของ SPU AI Business Talent Club", cap: "โปสเตอร์แนะนำทีม TA Support · SPU AI Business Talent Club" },
+        { src: "images/ta-coaching-1.jpg", alt: "TA ก้มลงช่วยผู้เรียนใช้งานโน้ตบุ๊กระหว่างเวิร์กช็อป", cap: "ช่วยผู้เรียนลงมือทำบนโน้ตบุ๊กระหว่างเวิร์กช็อป VAIP" },
+        { src: "images/ta-coaching-2.jpg", alt: "TA ให้คำแนะนำผู้เรียนที่โต๊ะระหว่างเวิร์กช็อป", cap: "ให้คำแนะนำผู้เรียนทีละคนระหว่างเวิร์กช็อป VAIP" },
+        { src: "images/ta-coaching-vaip12.jpg", alt: "TA ให้คำแนะนำผู้เรียนในห้องเรียน VAIP รุ่น 12", cap: "อยู่เคียงข้างผู้เรียนในห้องเรียน VAIP รุ่น 12" },
+        { src: "images/vaip12-group.jpg", alt: "ภาพหมู่ทีมงานและผู้เรียน VAIP รุ่น 12 ในห้องบรรยาย", cap: "ภาพหมู่ทีมงานและผู้เรียน VAIP รุ่น 12" },
         { src: "images/vaip10-backstage.jpg", alt: "ทีมงานนั่งเตรียมของที่ระลึกก่อนงาน VAIP รุ่น 10", cap: "เตรียมของที่ระลึกก่อนเริ่มงาน VAIP รุ่น 10" },
         { src: "images/ctc-2026.jpg", alt: "ภาพหมู่หน้าเวที Creative Talk Conference 2026", cap: "Supalai Creative Talk Conference (CTC 2026) · 19–20 มิ.ย. 2026 · Paragon Hall" },
-        { src: "images/seminar-speakers.jpg", alt: "ภาพหมู่ผู้เรียนและวิทยากรหลังจบสัมมนา", cap: "ภาพหมู่หลังจบสัมมนาร่วมกับวิทยากรและผู้เรียน" }
+        { src: "images/seminar-speakers.jpg", alt: "ภาพหมู่ผู้เรียนและวิทยากรหลังจบสัมมนา", cap: "ภาพหมู่หลังจบสัมมนาร่วมกับวิทยากรและผู้เรียน" },
+        { src: "images/cowork-group.jpg", alt: "ภาพหมู่ผู้เข้าร่วมกิจกรรมในห้องสัมมนา", cap: "ภาพหมู่หลังกิจกรรมสัมมนา/co-work" }
       ]
     },
     journey: {
@@ -196,9 +201,14 @@ window.CONTENT = {
       items: [
         { src: "images/vaip-ta-team.jpg", alt: "Group photo of the VAIP teaching assistants and staff in blue jackets", cap: "VAIP teaching assistants and team · School of Business Administration, SPU" },
         { src: "images/ta-support-poster.jpg", alt: "TA Support team introduction poster from SPU AI Business Talent Club", cap: "TA Support team poster · SPU AI Business Talent Club" },
+        { src: "images/ta-coaching-1.jpg", alt: "A TA leaning in to help a learner at a laptop during a workshop", cap: "Helping a learner get hands-on at the laptop during a VAIP workshop" },
+        { src: "images/ta-coaching-2.jpg", alt: "A TA advising a learner at their desk during a workshop", cap: "One-on-one guidance for learners during a VAIP workshop" },
+        { src: "images/ta-coaching-vaip12.jpg", alt: "A TA coaching a learner in the VAIP batch 12 classroom", cap: "Standing by learners in the VAIP batch 12 classroom" },
+        { src: "images/vaip12-group.jpg", alt: "Group photo of the team and learners of VAIP batch 12 in the lecture hall", cap: "Group photo of the team and learners, VAIP batch 12" },
         { src: "images/vaip10-backstage.jpg", alt: "Team members preparing small gifts before the VAIP batch 10 event", cap: "Preparing keepsakes before the VAIP batch 10 event" },
         { src: "images/ctc-2026.jpg", alt: "Group photo in front of the Creative Talk Conference 2026 stage", cap: "Supalai Creative Talk Conference (CTC 2026) · 19–20 Jun 2026 · Paragon Hall" },
-        { src: "images/seminar-speakers.jpg", alt: "Group photo of learners and speakers after a seminar", cap: "Group photo with speakers and learners after a seminar" }
+        { src: "images/seminar-speakers.jpg", alt: "Group photo of learners and speakers after a seminar", cap: "Group photo with speakers and learners after a seminar" },
+        { src: "images/cowork-group.jpg", alt: "Group photo of participants in a seminar room", cap: "Group photo after a seminar / co-work session" }
       ]
     },
     journey: {
