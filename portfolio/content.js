@@ -71,7 +71,7 @@ window.CONTENT = {
       h: "ติดต่อ",
       lead: "สนใจพูดคุยหรือต้องการข้อมูลเพิ่มเติม ติดต่อได้ทาง Facebook",
       links: [
-        { t: "Facebook", href: "https://www.facebook.com/your-id" }
+        { t: "Facebook", href: "https://www.facebook.com/pattarakit.sittiwongsa" }
       ]
     },
     footer: "© 2026 ภัทรกริช สิทธิวงค์ษา · สร้างด้วย HTML/CSS/JS"
@@ -145,7 +145,7 @@ window.CONTENT = {
       h: "Contact",
       lead: "Happy to talk or share more. Reach me on Facebook.",
       links: [
-        { t: "Facebook", href: "https://www.facebook.com/your-id" }
+        { t: "Facebook", href: "https://www.facebook.com/pattarakit.sittiwongsa" }
       ]
     },
     footer: "© 2026 Pattarakit Sitthiwongsa · Built with HTML/CSS/JS"
