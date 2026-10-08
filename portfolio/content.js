@@ -130,7 +130,7 @@ window.CONTENT = {
         { t: "Facebook", href: "https://www.facebook.com/pattarakit.sittiwongsa" }
       ]
     },
-    footer: "© 2026 ภัทรกริช สิทธิวงค์ษา · สร้างด้วย HTML/CSS/JS"
+    footer: "© 2026 ภัทรกริช สิทธิวงค์ษา (Pattarakrit Sitthiwongsa · Pattarakit Sittiwongsa) · สร้างด้วย HTML/CSS/JS"
   },
 
   en: {
@@ -260,6 +260,6 @@ window.CONTENT = {
         { t: "Facebook", href: "https://www.facebook.com/pattarakit.sittiwongsa" }
       ]
     },
-    footer: "© 2026 Pattarakrit Sitthiwongsa · Built with HTML/CSS/JS"
+    footer: "© 2026 Pattarakrit Sitthiwongsa (also spelled Pattarakit Sittiwongsa · ภัทรกริช สิทธิวงค์ษา) · Built with HTML/CSS/JS"
   }
 };
