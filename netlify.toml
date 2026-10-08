@@ -1,0 +1,10 @@
+# Netlify: publish the whole repo, and send the site root to the portfolio.
+# The Marketing Calendar app stays reachable at /index.html (linked from the portfolio).
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/"
+  to = "/portfolio/"
+  status = 302
+  force = true
