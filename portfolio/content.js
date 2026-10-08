@@ -5,12 +5,15 @@
 window.CONTENT = {
   th: {
     brand: "ภัทรกริช สิทธิวงค์ษา",
-    nav: { about: "เกี่ยวกับฉัน", skills: "ทักษะ", projects: "ผลงาน", gallery: "ภาพกิจกรรม", journey: "เส้นทาง", contact: "ติดต่อ" },
+    nav: { about: "เกี่ยวกับฉัน", skills: "ทักษะ", projects: "ผลงาน", certs: "ใบรับรอง", gallery: "ภาพกิจกรรม", journey: "เส้นทาง", contact: "ติดต่อ" },
     hero: {
       eyebrow: "Digital Marketing · มหาวิทยาลัยศรีปทุม",
-      title: "เปลี่ยนความเข้าใจพฤติกรรมมนุษย์<br>ให้เป็นกลยุทธ์การตลาด",
+      title: "เปลี่ยน<mark>พฤติกรรมมนุษย์</mark><br>ให้เป็น<mark class=\"b\">กลยุทธ์การตลาด</mark>",
       lead: "ภัทรกริช สิทธิวงค์ษา นักศึกษา Digital Marketing คณะบริหารธุรกิจ มหาวิทยาลัยศรีปทุม สนใจว่าอารมณ์ ความเชื่อ และอิทธิพลทางสังคมกำหนดการตัดสินใจของคนอย่างไร กำลังสมัครเรียนต่อ [สาขา/สถาบันที่ต้องการ]",
-      cta1: "ดูผลงาน", cta2: "ติดต่อฉัน"
+      cta1: "ดูผลงาน", cta2: "ติดต่อฉัน",
+      img: "images/vaip10-team.jpg", imgAlt: "ภาพหมู่ทีมผู้ช่วยสอน VAIP รุ่น 10 ใส่แจ็กเก็ตสีฟ้า",
+      sticker: "TA × 4 รุ่น",
+      marquee: ["Consumer Insight", "Brand Planning", "Customer Journey", "Content", "Product Thinking", "AI Workflow", "TA × VAIP 10–13"],
     },
     stats: [
       { n: "3.76", l: "GPA · Digital Marketing, ม.ศรีปทุม" },
@@ -19,6 +22,9 @@ window.CONTENT = {
     ],
     about: {
       h: "เกี่ยวกับฉัน",
+      kicker: "สิ่งที่ฉันอยากรู้อยู่เสมอ",
+      chips: ["อารมณ์", "ความเชื่อ", "อิทธิพลทางสังคม"],
+      punch: "…ทำให้คนตัดสินใจแบบนั้นได้ยังไง?",
       p: [
         "ฉันสนใจพฤติกรรมมนุษย์ โดยเฉพาะเรื่องที่อารมณ์ ความเชื่อ และอิทธิพลทางสังคมมีผลต่อการตัดสินใจ ฉันชอบเปลี่ยนสิ่งที่สังเกตเห็นให้เป็น insight แล้วต่อยอดเป็นไอเดียเชิงกลยุทธ์ ทั้งคอนเทนต์การตลาดและ product concept",
         "ที่ผ่านมาฉันพัฒนากลยุทธ์แคมเปญและโซลูชันที่เน้นผู้ใช้จากโจทย์จริงในการแข่งขันหลายรายการ และทำหน้าที่ผู้ช่วยสอน (TA) ให้โครงการ VAIP ตั้งแต่รุ่น 10 ถึงรุ่น 13 ร่วมกับพี่อ้น (AEIOU) และพี่มิ้น (Realize)",
@@ -81,6 +87,14 @@ window.CONTENT = {
         }
       ]
     },
+    certs: {
+      h: "ใบรับรองและการเรียนรู้",
+      items: [
+        { src: "images/cert-ai-workflow.jpg", alt: "ใบรับรองการอบรม AI Workflow Automation", title: "AI Workflow Automation", sub: "การออกแบบระบบงานอัตโนมัติเพื่อยกระดับประสิทธิภาพองค์กร", issuer: "Better Day Agency × Nobrainpany", date: "23 มี.ค. 2026" },
+        { src: "images/cert-genai.jpg", alt: "ใบรับรอง Generative AI for Productivity", title: "Generative AI for Productivity", sub: "Certificate of Attendance · ระดับ Practitioner · 6 ชั่วโมง", issuer: "SolutionsIMPACT", date: "12 ก.พ. 2026" },
+        { src: "images/spubus-talent.jpg", alt: "โปสเตอร์ SPUBUS Talent หัวข้อบทบาทของ AI กับการทำงานทางธุรกิจ", title: "SPUBUS Talent", sub: "บทบาทของ AI กับการทำงานทางธุรกิจในยุคปัจจุบัน โดยทีม Solutions Impact", issuer: "คณะบริหารธุรกิจ ม.ศรีปทุม", date: "" }
+      ]
+    },
     gallery: {
       h: "ภาพกิจกรรม",
       items: [
@@ -101,7 +115,9 @@ window.CONTENT = {
       items: [
         { when: "[ปี – ปัจจุบัน]", t: "Digital Marketing (MKT) · คณะบริหารธุรกิจ มหาวิทยาลัยศรีปทุม", d: "GPA 3.76" },
         { when: "มี.ค. 2026 – ปัจจุบัน", t: "DigiLife Branding Content Challenge Season 3 (Dreamy)", d: "คิดแนวคิดคอนเทนต์วิดีโอจากพฤติกรรมผู้ชม" },
+        { when: "23 มี.ค. 2026", t: "อบรม AI Workflow Automation", d: "Better Day Agency × Nobrainpany" },
         { when: "ก.พ. – มี.ค. 2026", t: "Website Development Project (About Skin Clinic)", d: "เสนอฟีเจอร์วิเคราะห์ผิวด้วย AI" },
+        { when: "12 ก.พ. 2026", t: "อบรม Generative AI for Productivity", d: "SolutionsIMPACT · ระดับ Practitioner 6 ชั่วโมง" },
         { when: "2025", t: "U Power Marketing Campaign Challenge SS.8 (Smooto)", d: "นำการพัฒนา concept แคมเปญ" },
         { when: "2025", t: "J-MAT Brand Planning Competition", d: "รวมและประสานทีมข้ามมหาวิทยาลัย" },
         { when: "[ปี – ปี]", t: "ผู้ช่วยสอน (TA) VAIP รุ่น 10–13", d: "ร่วมกับพี่อ้น (AEIOU) และพี่มิ้น (Realize) และเข้าร่วมงานสัมมนา/co-work ต่อเนื่อง" }
@@ -120,12 +136,15 @@ window.CONTENT = {
 
   en: {
     brand: "Pattarakrit Sitthiwongsa",
-    nav: { about: "About", skills: "Skills", projects: "Work", gallery: "Moments", journey: "Journey", contact: "Contact" },
+    nav: { about: "About", skills: "Skills", projects: "Work", certs: "Certificates", gallery: "Moments", journey: "Journey", contact: "Contact" },
     hero: {
       eyebrow: "Digital Marketing · Sripatum University",
-      title: "Turning insight into human behavior<br>into marketing strategy",
+      title: "Turning <mark>human behavior</mark><br>into <mark class=\"b\">marketing strategy</mark>",
       lead: "Pattarakrit Sitthiwongsa, a Digital Marketing student at the School of Business Administration, Sripatum University. Fascinated by how emotion, belief, and social influence shape decisions. Applying for further study in [program / institution].",
-      cta1: "View work", cta2: "Contact me"
+      cta1: "View work", cta2: "Contact me",
+      img: "images/vaip10-team.jpg", imgAlt: "Group photo of the VAIP batch 10 teaching assistants in blue jackets",
+      sticker: "TA × 4 batches",
+      marquee: ["Consumer Insight", "Brand Planning", "Customer Journey", "Content", "Product Thinking", "AI Workflow", "TA × VAIP 10–13"],
     },
     stats: [
       { n: "3.76", l: "GPA · Digital Marketing, SPU" },
@@ -134,6 +153,9 @@ window.CONTENT = {
     ],
     about: {
       h: "About me",
+      kicker: "What I keep asking",
+      chips: ["Emotion", "Belief", "Social influence"],
+      punch: "…how do these make people decide the way they do?",
       p: [
         "I am driven by human behavior, especially how emotion, belief, and social influence shape decision-making. I turn observations into insights, and insights into strategic ideas for marketing content and product concepts.",
         "I have built campaign strategies and user-centric solutions through real-case competitions, and served as a teaching assistant for the VAIP program from batch 10 through batch 13, alongside P' Aon (AEIOU) and P' Min (Realize).",
@@ -196,6 +218,14 @@ window.CONTENT = {
         }
       ]
     },
+    certs: {
+      h: "Certificates & learning",
+      items: [
+        { src: "images/cert-ai-workflow.jpg", alt: "Certificate for the AI Workflow Automation training", title: "AI Workflow Automation", sub: "Designing automated workflows to raise organizational efficiency", issuer: "Better Day Agency × Nobrainpany", date: "23 Mar 2026" },
+        { src: "images/cert-genai.jpg", alt: "Certificate of attendance, Generative AI for Productivity", title: "Generative AI for Productivity", sub: "Certificate of Attendance · Practitioner level · 6 hours", issuer: "SolutionsIMPACT", date: "12 Feb 2026" },
+        { src: "images/spubus-talent.jpg", alt: "SPUBUS Talent poster on the role of AI in business", title: "SPUBUS Talent", sub: "The role of AI in business today, by the Solutions Impact team", issuer: "School of Business Administration, SPU", date: "" }
+      ]
+    },
     gallery: {
       h: "Moments",
       items: [
@@ -216,7 +246,9 @@ window.CONTENT = {
       items: [
         { when: "[Year – Present]", t: "Digital Marketing (MKT) · School of Business Administration, Sripatum University", d: "GPA 3.76" },
         { when: "Mar 2026 – Present", t: "DigiLife Branding Content Challenge Season 3 (Dreamy)", d: "Developing video content concepts from audience behavior" },
+        { when: "23 Mar 2026", t: "AI Workflow Automation training", d: "Better Day Agency × Nobrainpany" },
         { when: "Feb – Mar 2026", t: "Website Development Project (About Skin Clinic)", d: "Proposed an AI-driven skin analysis feature" },
+        { when: "12 Feb 2026", t: "Generative AI for Productivity training", d: "SolutionsIMPACT · Practitioner level, 6 hours" },
         { when: "2025", t: "U Power Marketing Campaign Challenge SS.8 (Smooto)", d: "Led campaign concept development" },
         { when: "2025", t: "J-MAT Brand Planning Competition", d: "Formed and coordinated a cross-university team" },
         { when: "[Year – Year]", t: "Teaching assistant, VAIP batches 10–13", d: "With P' Aon (AEIOU) and P' Min (Realize), and kept attending seminars and co-work sessions" }
