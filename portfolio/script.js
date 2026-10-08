@@ -43,7 +43,7 @@
     $('projects-h').textContent = c.projects.h;
     $('projects-body').innerHTML = c.projects.items.map(function (p) {
       return '<article class="card project"><div class="head"><h3>' + esc(p.title) + '</h3><div class="role">' + esc(p.role) + '</div></div>' +
-        '<div class="inner"><p>' + esc(p.desc) + '</p><p class="result">' + esc(p.result) + '</p>' +
+        '<div class="inner"><p>' + esc(p.desc) + '</p>' + (p.result ? '<p class="result">' + esc(p.result) + '</p>' : '') +
         '<div class="tags">' + p.tags.map(function (t) { return '<span class="tag">' + esc(t) + '</span>'; }).join('') + '</div>' +
         (p.link ? '<a class="more" href="' + esc(p.link) + '">' + esc(p.linkText) + '</a>' : '') + '</div></article>';
     }).join('');

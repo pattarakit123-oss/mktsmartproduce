@@ -1,6 +1,6 @@
 /* =====================================================================
-   แก้เนื้อหาทั้งหมดของพอร์ตที่ไฟล์นี้ไฟล์เดียว (ข้อความที่ขึ้นต้นด้วย [ ] คือที่ว่างให้เติม)
-   Edit all portfolio content here. Anything in [ ] is a placeholder.
+   แก้เนื้อหาทั้งหมดของพอร์ตที่ไฟล์นี้ไฟล์เดียว (ก้อน th = ไทย, ก้อน en = อังกฤษ)
+   Edit all portfolio content here (th block = Thai, en block = English).
    ===================================================================== */
 window.CONTENT = {
   th: {
@@ -9,7 +9,7 @@ window.CONTENT = {
     hero: {
       eyebrow: "Digital Marketing · มหาวิทยาลัยศรีปทุม",
       title: "เปลี่ยน<mark>พฤติกรรมมนุษย์</mark><br>ให้เป็น<mark class=\"b\">กลยุทธ์การตลาด</mark>",
-      lead: "ภัทรกริช สิทธิวงค์ษา นักศึกษา Digital Marketing คณะบริหารธุรกิจ มหาวิทยาลัยศรีปทุม สนใจว่าอารมณ์ ความเชื่อ และอิทธิพลทางสังคมกำหนดการตัดสินใจของคนอย่างไร กำลังสมัครเรียนต่อ [สาขา/สถาบันที่ต้องการ]",
+      lead: "ภัทรกริช สิทธิวงค์ษา นักศึกษา Digital Marketing คณะบริหารธุรกิจ มหาวิทยาลัยศรีปทุม สนใจว่าอารมณ์ ความเชื่อ และอิทธิพลทางสังคมกำหนดการตัดสินใจของคนอย่างไร กำลังมองหาโอกาสเรียนต่อ",
       cta1: "ดูผลงาน", cta2: "ติดต่อฉัน",
       img: "images/vaip10-team.jpg", imgAlt: "ภาพหมู่ทีมผู้ช่วยสอน VAIP รุ่น 10 ใส่แจ็กเก็ตสีฟ้า",
       sticker: "TA × 4 รุ่น",
@@ -27,8 +27,7 @@ window.CONTENT = {
       punch: "…ทำให้คนตัดสินใจแบบนั้นได้ยังไง?",
       p: [
         "ฉันสนใจพฤติกรรมมนุษย์ โดยเฉพาะเรื่องที่อารมณ์ ความเชื่อ และอิทธิพลทางสังคมมีผลต่อการตัดสินใจ ฉันชอบเปลี่ยนสิ่งที่สังเกตเห็นให้เป็น insight แล้วต่อยอดเป็นไอเดียเชิงกลยุทธ์ ทั้งคอนเทนต์การตลาดและ product concept",
-        "ที่ผ่านมาฉันพัฒนากลยุทธ์แคมเปญและโซลูชันที่เน้นผู้ใช้จากโจทย์จริงในการแข่งขันหลายรายการ และทำหน้าที่ผู้ช่วยสอน (TA) ให้โครงการ VAIP ตั้งแต่รุ่น 10 ถึงรุ่น 13 ร่วมกับพี่อ้น (AEIOU) และพี่มิ้น (Realize)",
-        "[เป้าหมายการเรียนต่อ: อยากเรียนสาขา ... ที่ ... เพราะ ... และจะนำประสบการณ์เหล่านี้ไปต่อยอดอย่างไร]"
+        "ที่ผ่านมาฉันพัฒนากลยุทธ์แคมเปญและโซลูชันที่เน้นผู้ใช้จากโจทย์จริงในการแข่งขันหลายรายการ และทำหน้าที่ผู้ช่วยสอน (TA) ให้โครงการ VAIP ตั้งแต่รุ่น 10 ถึงรุ่น 13 ร่วมกับพี่อ้น (AEIOU) และพี่มิ้น (Realize)"
       ]
     },
     skills: {
@@ -74,14 +73,14 @@ window.CONTENT = {
           title: "ผู้ช่วยสอน (TA) โครงการ VAIP รุ่น 10–13",
           role: "TA ร่วมกับพี่อ้น (AEIOU) และพี่มิ้น (Realize) · คณะบริหารธุรกิจ ม.ศรีปทุม",
           desc: "ในทีม TA Support ของ SPU AI Business Talent Club ดูแลด้านการตลาดดิจิทัล: ช่วยผู้เรียนค้นหาไอเดียและแนวทางใหม่ๆ ให้คำปรึกษาเรื่องงานและการตลาดดิจิทัล และอยู่เคียงข้างทุกการเรียนรู้",
-          result: "สิ่งที่ได้: [เช่น จำนวนผู้เรียนที่ดูแล ผลลัพธ์ที่เกิดขึ้น]",
+          result: "",
           tags: ["TA", "AI", "การสื่อสาร"]
         },
         {
           title: "Marketing Calendar — ระบบวางแผนแคมเปญ",
           role: "ผู้สร้างและออกแบบ · เว็บแอป",
           desc: "เว็บแอปปฏิทินการตลาดที่ใช้วางแผนแคมเปญ แยกตามช่องทาง ติดตามสถานะ และดูภาพรวมผ่านแดชบอร์ด",
-          result: "สิ่งที่ได้: [เช่น วางแผนคอนเทนต์ครบทั้งเดือนในที่เดียว]",
+          result: "",
           tags: ["Planning", "Dashboard", "JavaScript"],
           link: "../index.html", linkText: "เปิดใช้งานแอป →"
         }
@@ -113,14 +112,14 @@ window.CONTENT = {
     journey: {
       h: "การศึกษาและประสบการณ์",
       items: [
-        { when: "[ปี – ปัจจุบัน]", t: "Digital Marketing (MKT) · คณะบริหารธุรกิจ มหาวิทยาลัยศรีปทุม", d: "GPA 3.76" },
+        { when: "ปัจจุบัน", t: "Digital Marketing (MKT) · คณะบริหารธุรกิจ มหาวิทยาลัยศรีปทุม", d: "GPA 3.76" },
         { when: "มี.ค. 2026 – ปัจจุบัน", t: "DigiLife Branding Content Challenge Season 3 (Dreamy)", d: "คิดแนวคิดคอนเทนต์วิดีโอจากพฤติกรรมผู้ชม" },
         { when: "23 มี.ค. 2026", t: "อบรม AI Workflow Automation", d: "Better Day Agency × Nobrainpany" },
         { when: "ก.พ. – มี.ค. 2026", t: "Website Development Project (About Skin Clinic)", d: "เสนอฟีเจอร์วิเคราะห์ผิวด้วย AI" },
         { when: "12 ก.พ. 2026", t: "อบรม Generative AI for Productivity", d: "SolutionsIMPACT · ระดับ Practitioner 6 ชั่วโมง" },
         { when: "2025", t: "U Power Marketing Campaign Challenge SS.8 (Smooto)", d: "นำการพัฒนา concept แคมเปญ" },
         { when: "2025", t: "J-MAT Brand Planning Competition", d: "รวมและประสานทีมข้ามมหาวิทยาลัย" },
-        { when: "[ปี – ปี]", t: "ผู้ช่วยสอน (TA) VAIP รุ่น 10–13", d: "ร่วมกับพี่อ้น (AEIOU) และพี่มิ้น (Realize) และเข้าร่วมงานสัมมนา/co-work ต่อเนื่อง" }
+        { when: "VAIP 10–13", t: "ผู้ช่วยสอน (TA) VAIP รุ่น 10–13", d: "ร่วมกับพี่อ้น (AEIOU) และพี่มิ้น (Realize) และเข้าร่วมงานสัมมนา/co-work ต่อเนื่อง" }
       ]
     },
     contact: {
@@ -140,7 +139,7 @@ window.CONTENT = {
     hero: {
       eyebrow: "Digital Marketing · Sripatum University",
       title: "Turning <mark>human behavior</mark><br>into <mark class=\"b\">marketing strategy</mark>",
-      lead: "Pattarakrit Sitthiwongsa, a Digital Marketing student at the School of Business Administration, Sripatum University. Fascinated by how emotion, belief, and social influence shape decisions. Applying for further study in [program / institution].",
+      lead: "Pattarakrit Sitthiwongsa, a Digital Marketing student at the School of Business Administration, Sripatum University. Fascinated by how emotion, belief, and social influence shape decisions. Looking for the next step in further study.",
       cta1: "View work", cta2: "Contact me",
       img: "images/vaip10-team.jpg", imgAlt: "Group photo of the VAIP batch 10 teaching assistants in blue jackets",
       sticker: "TA × 4 batches",
@@ -158,8 +157,7 @@ window.CONTENT = {
       punch: "…how do these make people decide the way they do?",
       p: [
         "I am driven by human behavior, especially how emotion, belief, and social influence shape decision-making. I turn observations into insights, and insights into strategic ideas for marketing content and product concepts.",
-        "I have built campaign strategies and user-centric solutions through real-case competitions, and served as a teaching assistant for the VAIP program from batch 10 through batch 13, alongside P' Aon (AEIOU) and P' Min (Realize).",
-        "[Study goal: I want to study ... at ... because ..., and I will build on these experiences by ...]"
+        "I have built campaign strategies and user-centric solutions through real-case competitions, and served as a teaching assistant for the VAIP program from batch 10 through batch 13, alongside P' Aon (AEIOU) and P' Min (Realize)."
       ]
     },
     skills: {
@@ -205,14 +203,14 @@ window.CONTENT = {
           title: "Teaching assistant, VAIP batches 10–13",
           role: "TA with P' Aon (AEIOU) and P' Min (Realize) · School of Business Administration, SPU",
           desc: "On the TA Support team of the SPU AI Business Talent Club, covering digital marketing: helping learners find ideas and new directions, advising on their work and on digital marketing, and standing by them through every step of learning.",
-          result: "Outcome: [e.g. learners supported, results achieved]",
+          result: "",
           tags: ["TA", "AI", "Communication"]
         },
         {
           title: "Marketing Calendar — campaign planner",
           role: "Creator & designer · Web app",
           desc: "A web app for planning campaigns by channel, tracking status, and viewing the big picture on a dashboard.",
-          result: "Outcome: [e.g. plans a full month of content in one place]",
+          result: "",
           tags: ["Planning", "Dashboard", "JavaScript"],
           link: "../index.html", linkText: "Open the app →"
         }
@@ -244,14 +242,14 @@ window.CONTENT = {
     journey: {
       h: "Education & experience",
       items: [
-        { when: "[Year – Present]", t: "Digital Marketing (MKT) · School of Business Administration, Sripatum University", d: "GPA 3.76" },
+        { when: "Now", t: "Digital Marketing (MKT) · School of Business Administration, Sripatum University", d: "GPA 3.76" },
         { when: "Mar 2026 – Present", t: "DigiLife Branding Content Challenge Season 3 (Dreamy)", d: "Developing video content concepts from audience behavior" },
         { when: "23 Mar 2026", t: "AI Workflow Automation training", d: "Better Day Agency × Nobrainpany" },
         { when: "Feb – Mar 2026", t: "Website Development Project (About Skin Clinic)", d: "Proposed an AI-driven skin analysis feature" },
         { when: "12 Feb 2026", t: "Generative AI for Productivity training", d: "SolutionsIMPACT · Practitioner level, 6 hours" },
         { when: "2025", t: "U Power Marketing Campaign Challenge SS.8 (Smooto)", d: "Led campaign concept development" },
         { when: "2025", t: "J-MAT Brand Planning Competition", d: "Formed and coordinated a cross-university team" },
-        { when: "[Year – Year]", t: "Teaching assistant, VAIP batches 10–13", d: "With P' Aon (AEIOU) and P' Min (Realize), and kept attending seminars and co-work sessions" }
+        { when: "VAIP 10–13", t: "Teaching assistant, VAIP batches 10–13", d: "With P' Aon (AEIOU) and P' Min (Realize), and kept attending seminars and co-work sessions" }
       ]
     },
     contact: {
